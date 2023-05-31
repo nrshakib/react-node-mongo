@@ -24,9 +24,11 @@ app.get("/", (req, res) => {
   res.send("Server Running");
 });
 
-app.post('/user', (req, res) => {
-  
-})
+app.post("/user", (req, res) => {
+  const newUser = req.body;
+  console.log("adding new user", newUser);
+  res.send({ result: 'success' });
+});
 
 app.listen(port, async () => {
   console.log("Server is listening");
